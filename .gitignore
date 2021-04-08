@@ -1,0 +1,21 @@
+# Project
+/node_modules
+/dist
+/coverage
+/analyzer
+npm-debug.log
+yarn-error.log
+.env
+.npmrc
+.yarnrc
+
+# WebStorm
+*.iml
+/.idea
+
+# VSCode
+/.vscode
+jsconfig.json
+
+# AWS SSH KEY
+*.ppk

@@ -1,0 +1,44 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "globals": {
+    "document": true,
+    "window": true
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx", "*.json"]
+    }
+  ],
+  "rules": {
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": 0,
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [
+          "./config/**",
+          "**/*.config.*",
+          "**/*.spec.*",
+          "**/*.test.*"
+        ]
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["components", "./src/components"],
+          ["hooks", "./src/hooks"],
+          ["services", "./src/services"],
+          ["utils", "./src/utils"]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
+  }
+}

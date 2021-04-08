@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="<%=htmlWebpackPlugin.options.dir %>">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>CoP Mock Service Worker</title>
+    <link rel="stylesheet" href="https://st.mngbcn.com/static/styleguide/styles.css">
+    <script type="text/javascript" src="https://st.mngbcn.com/static/js/react.production.min.js"></script>
+    <script type="text/javascript" src="https://st.mngbcn.com/static/js/react-dom.production.min.js"></script>
+    <script type="text/javascript"
+      src="https://st.mngbcn.com/static/js/webcomponents/2.4.0/webcomponents-loader.js"></script>
+    <script type="text/javascript"
+      src="https://st.mngbcn.com/static/js/webcomponents/2.4.0/custom-elements-es5-adapter.js"></script>
+    <script type="text/javascript" src="https://st.mngbcn.com/js/micro-frontend.js"></script>
+  </head>
+  <body style="margin: 0; padding: 0;">
+    <micro-frontend url="" name="mswCop" />
+  </body>
+  <script>
+    window.localStorage.setItem('mdm', '{"mail":"test@mango.com","logged":"true","firstName":"Fronties","application":"shop","brandID":"she","countryID":"001","countryISO":"ES","externalID":"123123","languageID":"ES","languageISO":"es"}');
+    window.dataLayerV2Json = {};
+    window.dataLayer = [];
+    window.verne = {
+      analytics: {
+        push: (callback) => {
+          const result = callback();
+          window.dataLayer.push(result);
+        }
+      }
+    }
+  </script>
+</html>

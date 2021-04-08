@@ -1,0 +1,8 @@
+{
+  "skip": {
+    "tag": true
+  },
+  "scripts": {
+    "postchangelog": "replace '///commit/' '/stash/projects/{bitbucketProjectKey}/repos/{projectName}/commits/' CHANGELOG.md && replace '///compare.*\\.\\.\\.' '/stash/projects/{bitbucketProjectKey}/repos/{projectName}/browse?at=refs%2Ftags%2F' CHANGELOG.md"
+  }
+}
